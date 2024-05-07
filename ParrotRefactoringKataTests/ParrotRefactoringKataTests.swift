@@ -9,28 +9,39 @@ import XCTest
 @testable import ParrotRefactoringKata
 
 final class ParrotRefactoringKataTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func testSpeedOfEuropeanParrot() throws {
+        let parrot = Parrot(.european, numberOfCoconuts: 0, voltage: 0.0, isNailed: false)
+        XCTAssertEqual(parrot.speed(), 12.0)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testSpeedOfAfricanParrot_with_one_coconut() throws {
+        let parrot = Parrot(.african, numberOfCoconuts: 1, voltage: 0.0, isNailed: false)
+        XCTAssertEqual(parrot.speed(), 3.0)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testSpeedOfAfricanParrot_with_two_coconuts() throws {
+        let parrot = Parrot(.african, numberOfCoconuts: 2, voltage: 0.0, isNailed: false)
+        XCTAssertEqual(parrot.speed(), 0.0)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testSpeedOfAfricanParrot_with_no_coconuts() throws {
+        let parrot = Parrot(.african, numberOfCoconuts: 0, voltage: 0.0, isNailed: false)
+        XCTAssertEqual(parrot.speed(), 12.0)
     }
-
+    
+    func testSpeedOfNorwegianBlueParrot_nailed() throws {
+        let parrot = Parrot(.norwegianBlue, numberOfCoconuts: 0, voltage: 0.0, isNailed: true)
+        XCTAssertEqual(parrot.speed(), 0.0)
+    }
+    
+    func testSpeedOfNorwegianBlueParrot_not_nailed() throws {
+        let parrot = Parrot(.norwegianBlue, numberOfCoconuts: 0, voltage: 1.5, isNailed: false)
+        XCTAssertEqual(parrot.speed(), 18.0)
+    }
+    
+    func testSpeedOfNorwegianBlueParrot_not_nailed_high_voltage() throws {
+        let parrot = Parrot(.norwegianBlue, numberOfCoconuts: 0, voltage: 4.0, isNailed: false)
+        XCTAssertEqual(parrot.speed(), 24.0)
+    }
 }
