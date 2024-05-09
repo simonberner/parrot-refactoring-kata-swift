@@ -13,7 +13,7 @@ class Parrot {
     private let voltage: Double
     private let isNailed: Bool
     
-    private init(_ type: ParrotType, numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
+    public init(_ type: ParrotType, numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
         self.type = type
         self.numberOfCoconuts = numberOfCoconuts
         self.voltage = voltage
@@ -28,7 +28,7 @@ class Parrot {
         case .european:
             parrot = Parrot(type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
         case .african:
-            parrot = Parrot(type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
+            parrot = AfricanParrot(type: type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
         case .norwegianBlue:
             parrot = Parrot(type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
         }
