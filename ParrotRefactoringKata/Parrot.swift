@@ -8,10 +8,10 @@
 import Foundation
 
 class Parrot {
-    private let type: ParrotType
-    private let numberOfCoconuts: Int
-    private let voltage: Double
-    private let isNailed: Bool
+    public let type: ParrotType
+    public let numberOfCoconuts: Int
+    public let voltage: Double
+    public let isNailed: Bool
     
     public init(_ type: ParrotType, numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
         self.type = type
@@ -35,28 +35,20 @@ class Parrot {
         return parrot
     }
     
-    func speed() -> Double {
-        switch type {
-        case .european:
-            return baseSpeed
-            
-        case .african:
-            return max(0, baseSpeed - loadFactor * Double(numberOfCoconuts))
-            
-        case .norwegianBlue:
-            return isNailed ? 0 : baseSpeed(voltage: voltage)
-        }
+    // There is no such concept as abstract in Swift -> use protcol
+    public func speed() -> Double {
+        preconditionFailure("This method must be overridden")
     }
     
-    private func baseSpeed(voltage: Double) -> Double {
+    public func baseSpeed(voltage: Double) -> Double {
         min(24.0, voltage * baseSpeed)
     }
     
-    private var loadFactor: Double {
+    public var loadFactor: Double {
         9.0
     }
     
-    private var baseSpeed: Double {
+    public var baseSpeed: Double {
         12.0
     }
 }

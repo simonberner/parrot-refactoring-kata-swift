@@ -11,4 +11,8 @@ class EuropeanParrot: Parrot {
     init(numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
         super.init(.european, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
     }
+    
+    override func speed() -> Double {
+        return baseSpeed
+    }
 }
