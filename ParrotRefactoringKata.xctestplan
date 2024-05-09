@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "D5F6379B-2FF6-44F9-96C2-2E200DCA7533",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ParrotRefactoringKata.xcodeproj",
+      "identifier" : "15DA7FA22BEAA5ED00F178EF",
+      "name" : "ParrotRefactoringKata"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ParrotRefactoringKata.xcodeproj",
+        "identifier" : "15DA7FB22BEAA5F200F178EF",
+        "name" : "ParrotRefactoringKataTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ParrotRefactoringKata.xcodeproj",
+        "identifier" : "15DA7FBC2BEAA5F200F178EF",
+        "name" : "ParrotRefactoringKataUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
