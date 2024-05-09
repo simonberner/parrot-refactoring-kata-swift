@@ -8,13 +8,11 @@
 import Foundation
 
 class Parrot {
-    public let type: ParrotType
     public let numberOfCoconuts: Int
     public let voltage: Double
     public let isNailed: Bool
     
-    public init(_ type: ParrotType, numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
-        self.type = type
+    public init(numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
         self.numberOfCoconuts = numberOfCoconuts
         self.voltage = voltage
         self.isNailed = isNailed
