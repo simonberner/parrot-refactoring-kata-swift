@@ -26,11 +26,11 @@ class Parrot {
         
         switch type {
         case .european:
-            parrot = EuropeanParrot(type: type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
+            parrot = EuropeanParrot(numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
         case .african:
-            parrot = AfricanParrot(type: type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
+            parrot = AfricanParrot(numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
         case .norwegianBlue:
-            parrot = NorwegianParrot(type: type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
+            parrot = NorwegianParrot(numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
         }
         return parrot
     }
