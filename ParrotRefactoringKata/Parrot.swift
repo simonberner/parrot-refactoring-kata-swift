@@ -13,11 +13,16 @@ class Parrot {
     private let voltage: Double
     private let isNailed: Bool
     
-    init(_ type: ParrotType, numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
+    private init(_ type: ParrotType, numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
         self.type = type
         self.numberOfCoconuts = numberOfCoconuts
         self.voltage = voltage
         self.isNailed = isNailed
+    }
+    
+    // factory method
+    static func createParrot(type: ParrotType, numberOfCoconuts: Int, voltage: Double, isNailed: Bool) -> Parrot {
+        return Parrot(type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
     }
     
     func speed() -> Double {
