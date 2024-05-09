@@ -22,7 +22,17 @@ class Parrot {
     
     // factory method
     static func createParrot(type: ParrotType, numberOfCoconuts: Int, voltage: Double, isNailed: Bool) -> Parrot {
-        return Parrot(type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
+        var parrot: Parrot
+        
+        switch type {
+        case .european:
+            parrot = Parrot(type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
+        case .african:
+            parrot = Parrot(type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
+        case .norwegianBlue:
+            parrot = Parrot(type, numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
+        }
+        return parrot
     }
     
     func speed() -> Double {
