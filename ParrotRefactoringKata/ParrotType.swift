@@ -16,11 +16,11 @@ enum ParrotType {
         
         switch type {
         case .european:
-            parrot = EuropeanParrot(numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
+            parrot = EuropeanParrot(voltage: voltage, isNailed: isNailed)
         case .african:
             parrot = AfricanParrot(numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
         case .norwegianBlue:
-            parrot = NorwegianParrot(numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
+            parrot = NorwegianParrot(voltage: voltage, isNailed: isNailed)
         }
         return parrot
     }

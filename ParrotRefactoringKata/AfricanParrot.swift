@@ -8,8 +8,11 @@
 import Foundation
 
 class AfricanParrot: Parrot {
-    override init(numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
-        super.init(numberOfCoconuts: numberOfCoconuts, voltage: voltage, isNailed: isNailed)
+    private var numberOfCoconuts: Int
+    
+    init(numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
+        self.numberOfCoconuts = numberOfCoconuts
+        super.init(voltage: voltage, isNailed: isNailed)
     }
     
     override func speed() -> Double {

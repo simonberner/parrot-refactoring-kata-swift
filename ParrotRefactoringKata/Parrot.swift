@@ -8,12 +8,10 @@
 import Foundation
 
 class Parrot {
-    public let numberOfCoconuts: Int
     public let voltage: Double
     public let isNailed: Bool
     
-    public init(numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
-        self.numberOfCoconuts = numberOfCoconuts
+    public init(voltage: Double, isNailed: Bool) {
         self.voltage = voltage
         self.isNailed = isNailed
     }
