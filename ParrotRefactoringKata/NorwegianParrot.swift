@@ -8,8 +8,12 @@
 import Foundation
 
 class NorwegianParrot: Parrot {
-    override init(voltage: Double, isNailed: Bool) {
-        super.init(voltage: voltage, isNailed: isNailed)
+    private let voltage: Double
+    private let isNailed: Bool
+
+    init(voltage: Double, isNailed: Bool) {
+        self.voltage = voltage
+        self.isNailed = isNailed
     }
     
     override func speed() -> Double {

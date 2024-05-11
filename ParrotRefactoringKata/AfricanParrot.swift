@@ -12,7 +12,7 @@ class AfricanParrot: Parrot {
     
     init(numberOfCoconuts: Int, voltage: Double, isNailed: Bool) {
         self.numberOfCoconuts = numberOfCoconuts
-        super.init(voltage: voltage, isNailed: isNailed)
+        super.init()
     }
     
     override func speed() -> Double {

@@ -8,12 +8,9 @@
 import Foundation
 
 class Parrot {
-    public let voltage: Double
-    public let isNailed: Bool
     
-    public init(voltage: Double, isNailed: Bool) {
-        self.voltage = voltage
-        self.isNailed = isNailed
+    public init() {
+
     }
     
     // There is no such concept as abstract in Swift -> use protcol
