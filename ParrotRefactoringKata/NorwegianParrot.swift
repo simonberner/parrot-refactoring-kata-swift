@@ -13,6 +13,6 @@ class NorwegianParrot: Parrot {
     }
     
     override func speed() -> Double {
-        return isNailed ? 0 : baseSpeed(voltage: voltage)
+        return isNailed ? 0 : min(24.0, voltage * baseSpeed)
     }
 }

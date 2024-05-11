@@ -21,10 +21,6 @@ class Parrot {
         preconditionFailure("This method must be overridden")
     }
     
-    public func baseSpeed(voltage: Double) -> Double {
-        min(24.0, voltage * baseSpeed)
-    }
-    
     public var loadFactor: Double {
         9.0
     }
