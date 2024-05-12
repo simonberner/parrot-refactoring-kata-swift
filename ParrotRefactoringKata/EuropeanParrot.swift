@@ -8,10 +8,6 @@
 import Foundation
 
 class EuropeanParrot: Parrot {
-    override init() {
-        super.init()
-    }
-    
     override func speed() -> Double {
         return baseSpeed
     }

@@ -8,11 +8,6 @@
 import Foundation
 
 class Parrot {
-    
-    public init() {
-
-    }
-    
     // There is no such concept as abstract in Swift -> use protcol
     public func speed() -> Double {
         preconditionFailure("This method must be overridden")
