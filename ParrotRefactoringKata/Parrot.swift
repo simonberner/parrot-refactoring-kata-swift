@@ -10,6 +10,6 @@ import Foundation
 // There is no such concept as abstract in Swift -> use protcol
 protocol Parrot {
     func speed() -> Double
-    var loadFactor: Double { get set }
-    var baseSpeed: Double { get set }
+    var loadFactor: Double { get }
+    var baseSpeed: Double { get }
 }
