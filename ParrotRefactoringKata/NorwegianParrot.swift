@@ -8,6 +8,9 @@
 import Foundation
 
 class NorwegianParrot: Parrot {
+    var loadFactor = 9.0
+    var baseSpeed = 12.0
+    
     private let voltage: Double
     private let isNailed: Bool
 
@@ -16,7 +19,7 @@ class NorwegianParrot: Parrot {
         self.isNailed = isNailed
     }
     
-    override func speed() -> Double {
+    func speed() -> Double {
         return isNailed ? 0 : min(24.0, voltage * baseSpeed)
     }
 }

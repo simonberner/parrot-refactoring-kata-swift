@@ -8,7 +8,10 @@
 import Foundation
 
 class EuropeanParrot: Parrot {
-    override func speed() -> Double {
+    var loadFactor: Double = 0.0
+    var baseSpeed = 12.0
+    
+    func speed() -> Double {
         return baseSpeed
     }
 }

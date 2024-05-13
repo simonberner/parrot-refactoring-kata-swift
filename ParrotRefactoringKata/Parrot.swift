@@ -7,17 +7,9 @@
 
 import Foundation
 
-class Parrot {
-    // There is no such concept as abstract in Swift -> use protcol
-    public func speed() -> Double {
-        preconditionFailure("This method must be overridden")
-    }
-    
-    public var loadFactor: Double {
-        9.0
-    }
-    
-    public var baseSpeed: Double {
-        12.0
-    }
+// There is no such concept as abstract in Swift -> use protcol
+protocol Parrot {
+    func speed() -> Double
+    var loadFactor: Double { get set }
+    var baseSpeed: Double { get set }
 }
